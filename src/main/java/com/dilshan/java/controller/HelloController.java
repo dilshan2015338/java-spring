@@ -1,7 +1,11 @@
 package com.dilshan.java.controller;
 
+import com.dilshan.java.modal.User;
 import com.dilshan.java.service.GreetingService;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController  // = @Controller + @ResponseBody (returns JSON by default)
@@ -40,5 +44,11 @@ public class HelloController {
         public String getVersion() {
             return version;
         }
+    }
+
+    @PostMapping("/createUser")
+    public void createUser(@RequestBody @Valid User user) {
+        System.out.println("Received user: " + user.getUsername());
+
     }
 }
