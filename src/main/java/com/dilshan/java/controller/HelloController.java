@@ -1,6 +1,6 @@
 package com.dilshan.java.controller;
 
-import com.dilshan.java.modal.User;
+//import com.dilshan.java.modal.User;
 import com.dilshan.java.service.GreetingService;
 import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -46,9 +46,9 @@ public class HelloController {
         }
     }
 
-    @PostMapping("/createUser")
-    public void createUser(@RequestBody @Valid User user) {
-        System.out.println("Received user: " + user.getUsername());
-
-    }
+//    @PostMapping("/createUser")
+//    public void createUser(@RequestBody @Valid User user) {
+//        System.out.println("Received user: " + user.getUsername());
+//
+//    }
 }
